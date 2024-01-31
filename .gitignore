@@ -108,15 +108,19 @@ ipython_config.py
 #   in version control.
 #   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
-cert.crt
-cert.key
+<<<<<<< HEAD
+=======
+
+>>>>>>> dfcd451a1b9f878c8577f97d6b22e4a1250f3b12
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
-
+#cert
+cert.crt
+cert.key
 # SageMath parsed files
 *.sage.py
 
