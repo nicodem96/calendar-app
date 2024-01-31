@@ -1,0 +1,141 @@
+.app-sidebar {
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease;
+    display: flex;
+    flex-shrink: 0;
+    width: 265px;
+    background-color: var(--calitera-blue-darkest);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    .app-sidebar-logo {
+        border-bottom: 1px solid var(--calitera-blue-dark);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        flex-shrink: 0;
+    }
+    .app-sidebar-toggle {
+        box-shadow: var(--calitera-sidebar-base-toggle-btn-box-shadow)!important;
+        background-color: var(--calitera-white)!important;
+    }
+    .app-sidebar-wrapper {
+        width: 265px;
+    }
+    .menu .menu-item .menu-link {
+        color: var(--calitera-grey);
+        text-decoration: none;
+        font-size: 15px;
+    }
+    
+    .menu .menu-item .menu-sub .menu-link {
+        font-size: 13px;
+    }
+    .menu-item .menu-sub .menu-link .menu-icon {
+       margin-right: 0.25rem;
+       justify-content: start;
+       width: 1.5rem;
+   }
+   .menu .menu-item,
+   .menu .menu-item.here>.menu-link {
+    transition: color .2s ease;
+    color: var(--calitera-white);
+        // background-color: var(--calitera-blue-selected);
+    }
+    .menu .menu-item .menu-link .menu-icon,
+    .menu .menu-item .menu-link .menu-icon .svg-icon, 
+    .menu .menu-item .menu-link .menu-icon i {
+        color: var(--calitera-blue-lightest);
+    }
+    .menu .menu-item.here>.menu-link .menu-icon, 
+    .menu .menu-item.here>.menu-link .menu-icon .svg-icon, 
+    .menu .menu-item.here>.menu-link .menu-icon i {
+        color: var(--calitera-white);
+    }
+    .menu .menu-item .menu-link .menu-title {
+        color: var(--calitera-grey);
+    }
+    .menu-item.here>.menu-link .menu-title {
+        color: var(--calitera-white);
+    }
+    .menu .menu-item:hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here), 
+    .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) {
+        transition: color .2s ease;
+        color: var(--calitera-white);
+        // background-color: var(--calitera-blue-selected);
+    }
+    .menu .menu-item.hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here) .menu-icon, 
+    .menu .menu-item.hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here) .menu-icon .svg-icon, 
+    .menu .menu-item.hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here) .menu-icon i, 
+    .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) .menu-icon, 
+    .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) .menu-icon .svg-icon, 
+    .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) .menu-icon i {
+        color: var(--calitera-white);
+    }
+    .menu .menu-item.hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here) .menu-title, 
+    .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) .menu-title {
+        color: var(--calitera-white);
+    }
+}
+
+
+.app-sidebar-logo-minimize {
+    display: none;
+}
+
+body.sidebar-minimized {
+    .app-sidebar {
+        width: 75px;
+        .app-sidebar-logo {
+            .app-sidebar-logo-minimize {
+                display: inline-block;
+            }
+            .app-sidebar-logo-default {
+                display: none;
+            }
+        }
+        .app-sidebar-menu .menu-content, 
+        .app-sidebar-menu .menu-title {
+            opacity: 0;
+            transition: opacity .3s ease!important;
+        }
+    }
+    .app-header {
+        left: 75px;
+    }
+    .app-wrapper { 
+        margin-left: 75px;   
+    }
+}
+
+
+
+.app-sidebar .menu .menu-item .menu-sub .menu-link {
+    &.active,
+    &:hover {
+        transition: color .2s ease;
+        color: var(--calitera-white);
+        background-color: var(--calitera-blue-selected);
+        .menu-title {
+            color: var(--calitera-white);
+        }
+    }
+}
+
+.menu-sub-indention .menu-sub:not([data-popper-placement]) {
+    @include transition-all;
+}
+
+body.sidebar-minimized {
+    .menu-sub-indention .menu-sub:not([data-popper-placement]) {
+        margin-left: 5px;
+    }
+}

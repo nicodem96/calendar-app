@@ -1,0 +1,21 @@
+@mixin transition-all  {
+	-moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.33s;
+    -o-transition-duration: 0.33s;
+    -webkit-transition-duration: 0.33s;
+    transition-duration: 0.33s;
+}
+
+@mixin transition-all-long  {
+	-moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}

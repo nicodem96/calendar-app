@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./calendar_app:/calendar_app
+    command: >
+      sh -c "python manage.py wait_for_db &&
+             python manage.py migrate &&
+             python manage.py runserver_plus --cert-file cert.crt 0.0.0.0:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASS=changeme
+      - DJANGO_SECRET_KEY=django-insecure-yiq$$swl4npo92e@pggylk814lapk(q068+@yjdyhfoh5m+^+xw
+      - SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=871165607254-4r2lms4n6ptm7a91jv7pj94jt0ilg1pj.apps.googleusercontent.com
+      - SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=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
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16.0-alpine3.18
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=changeme
+
+volumes:
+  dev-db-data:

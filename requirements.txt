@@ -1,0 +1,7 @@
+django
+social-auth-app-django
+psycopg2
+environs[django]
+werkzeug
+pyOpenSSL
+django-extensions

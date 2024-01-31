@@ -1,0 +1,323 @@
+.app-toolbar {
+    height: auto;
+    background-color: transparent;
+    border-top: 0;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.card {
+    border: 0;
+    box-shadow: var(--calitera-card-box-shadow);
+    background-color: var(--calitera-white);
+    height: 100%;
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        min-height: 70px;
+        padding: 0 2.25rem;
+        background-color: transparent;
+        border-bottom: 1px solid var(--calitera-grey-light);
+        .card-title {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem;
+            margin-left: 0;
+            width: 100%;
+        }
+        .card-title, .card-label {
+            font-weight: 500;
+            font-size: 1.275rem;
+            color: var(--calitera-blue-darkest);
+        }
+    }
+    &.card-flush>.card-header {
+        border-bottom: 0!important;
+    }
+    .card-body {
+        padding: 2rem 2.25rem;
+    }
+}
+
+.w-230px {
+    width: 230px!important;
+}
+
+.chart-container {
+    padding: 0 10px 20px 10px;
+    width: 100%;
+    display: block;
+    aspect-ratio: 1/1;
+    max-width: 500px;
+    margin: 0 auto;
+    @media (min-width: 1200px) and (max-width: 1800px) {
+        aspect-ratio: 3/4;
+    }
+    canvas {
+        margin: 0 auto;
+        width: 100%!important;
+        height: 100%!important;
+    }
+}
+
+.client-actions .btn {
+    line-height: 1.8;
+}
+
+.nav-line-tabs.nav-line-tabs-2x.calitera-horiz-tabs {
+    a {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-left: 0.5rem!important;
+        margin-right: 0.5rem!important;
+        &.active {
+            background-color: var(--calitera-blue-light)!important;
+            color: $white!important;
+            .svg-icon {
+                color: $white!important;
+            }
+            &:hover {
+                background-color: var(--calitera-blue-light)!important;
+                color: $white!important;
+                .svg-icon {
+                    color: $white!important;
+                }
+            }
+            
+        }
+        &.btn {
+            color:var(--kt-gray-700);
+            font-weight: 500;
+        }
+        &:hover {
+            background-color: darken(#E4E6EF, 5%)!important;
+        }
+    }
+}
+
+.modal-body {
+    .image-input .image-input-wrapper {
+        width: 156px;
+        height: 156px;
+    }
+}
+
+.custom-dots-container {
+    position: relative;
+    padding: 0 0 25px;
+}
+
+.carousel-custom .custom-dots-container { 
+    .carousel-indicators.carousel-indicators-bullet li:after {
+        background-color: var(--kt-secondary);   
+        border-radius: 8px;
+        height: 15px;
+        width: 15px;
+    }
+    .carousel-indicators.carousel-indicators-bullet li {
+        border-radius: 8px;
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+    }
+    .carousel-indicators.carousel-indicators-bullet li.active {
+        width: 30px;
+        height: 15px;
+        &:after {
+         width: 30px;
+         height: 15px;
+     }
+ }
+}
+
+.client-actions {
+    position: absolute;
+    text-align: center;
+    -webkit-transform: translateY(30px) translateX(-100%) rotate(-90deg);
+    transform: translateY(30px) translateX(-100%) rotate(-90deg);
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+    margin-left: -80px;
+    &.opportunities-actions {
+        -webkit-transform: translateY(-94px) translateX(-100%) rotate(-90deg);
+        transform: translateY(-94px) translateX(-100%) rotate(-90deg);
+    }
+    a {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        &:hover {
+            background-color: darken(#E4E6EF, 5%)!important;
+        }
+        &.active {
+            background-color: var(--calitera-blue-light)!important;
+            color: $white!important;
+            .svg-icon {
+                color: $white!important;
+            }
+            &:hover {
+                background-color: var(--calitera-blue-light)!important;
+                color: $white!important;
+                .svg-icon {
+                    color: $white!important;
+                }
+            }
+            
+        }
+    }
+}
+
+.calitera-billing-history {
+    .table-responsive .btn {
+        font-size: var(--bs-btn-font-size);
+    }
+}
+
+.list-filters {
+    .single-filter {
+        &:nth-last-child(1) {
+            .separator {
+                display: none;
+            }
+        }
+    }
+}
+.filters-actions {
+    .col-md-6:nth-last-child(1),
+    .col-md-6:nth-last-child(2) {
+        .single-filter {
+            
+            .separator {
+                display: none;
+            }
+        }
+    }
+    .single-filter {
+        .form-check-input:checked+label, .form-check-input:checked+span {
+            color: var(--calitera-blue-light);
+        }
+        input,
+        label {
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: 0;
+        }
+    }
+    button {
+        height: auto!important;
+    }
+}
+.calitera-grey-card {
+    background-color: var(--calitera-grey-card);
+    padding: 20px;
+    border-radius: 10px;
+    .table.table-row-dashed tr {
+        border-bottom-color: var(--kt-text-gray-400);
+    }
+}
+
+.calitera-progress {
+    position: relative;
+    &:after {
+        content: '';
+        width: 100%;
+        height: 12px;
+        background-color: var(--kt-form-check-input-bg-solid);
+        position: absolute;
+        top: 20px;
+        left: 0;
+        z-index: 0;
+    }
+    ul.calitera-progressbar {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        li {
+            width: 25%;
+            position: relative;
+            .form-check-custom {
+                align-items: flex-start;
+                flex-direction: column;
+                z-index: 3;
+                position: relative;
+                label {
+                    margin-left: 0;
+                    padding-top: 10px;
+                    width: 50px;
+                    text-align: center;
+                    line-height: 1;
+                    cursor: pointer;
+                }
+                .form-check-input {
+                    cursor: pointer;
+                    &:checked+label {
+                        color: var(--calitera-blue-light);   
+                        font-weight: 600;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                padding-left: 5%;
+                .form-check-custom {
+                    align-items: center;
+                    label {
+                        width: 75px;
+                    }   
+                }
+                &:after {
+                    left: unset;
+                    right: 5%;
+                }
+            }
+            &:nth-child(2) {
+                padding-right: 5%;
+                .form-check-custom {
+                    align-items: center;
+                }
+                &:after {
+                    // left: -75%;
+                    // right: 49px;
+                    right: calc(25% + 20px);
+                    left: unset;
+                }
+            }
+            &:nth-child(4) {
+                .form-check-custom {
+                    align-items: flex-end;
+                }
+                &:after {
+                    left: unset;
+                    right: 49px;
+                    width: 110%;
+                }
+            }
+            &:after {
+                content: '';
+                width: 150%;
+                height: 12px;
+                background-color: var(--kt-form-check-input-bg-solid);
+                position: absolute;
+                top: 20px;
+                left: 2px;
+                z-index: 1;
+            }
+            &.active {
+                &:after {
+                    background-color: var(--calitera-blue-light);   
+                }
+                .form-check-input {
+                    background-color:var(--kt-form-check-input-checked-bg-color-solid);
+                }
+                label {
+                    color: var(--kt-form-check-label-color-checked);
+                }
+            }
+        }
+    }
+}

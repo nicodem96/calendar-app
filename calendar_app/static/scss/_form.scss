@@ -1,0 +1,38 @@
+.col-form-label {
+	display: block;
+	width: 100%;
+}
+
+.svg-icon-profile svg {
+	height: 5rem !important;
+	width: 5rem !important;
+	margin-left: -5px;
+}
+
+h2.fs-11 {
+	font-size:4rem;
+	margin-bottom: 0;
+}
+
+.input-group.row {
+	width: unset;
+}
+
+.input-group {
+	.table-responsive {
+		margin-left: 0!important;
+    background-color: var(--kt-input-solid-bg);
+    border-color: var(--kt-input-solid-bg);
+    color: var(--kt-input-solid-color);
+    transition: color .2s ease;
+    padding: 5px 20px 5px;
+    border-radius: 8px!important;
+    width: 100%;
+	}
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}

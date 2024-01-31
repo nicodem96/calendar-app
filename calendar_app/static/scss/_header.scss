@@ -1,0 +1,94 @@
+.app-header {
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 70px;
+    left: 265px;
+    background-color: var(--calitera-white);
+    -webkit-box-shadow: var(--calitera-header-base-box-shadow);
+    box-shadow: var(--calitera-header-base-box-shadow);
+    transition: none;
+    display: flex;
+    align-items: stretch;
+    -webkit-transition: left .3s ease;
+    transition: left .3s ease;
+    .cursor-pointer {
+        &:after {
+            content: "";
+            width: 100%;
+            display: block;
+            height: 15px;
+            position: relative;
+        }
+        &:hover {
+            .menu-sub-dropdown.menu {
+                display: flex;
+                will-change: transform;
+                animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1, menu-sub-dropdown-animation-move-up 0.3s ease 1;
+            }
+            &:before {
+                content: "";
+                display: block;
+                left: -235px;
+                width: 235px;
+                cursor: default !important;
+                top: 0;
+                position: absolute;
+                height: 55px;
+            }
+        }
+    }
+    .menu-sub-dropdown {
+        position: absolute;
+        top: 55px;
+        left: -235px;
+        cursor: default!important;
+        .symbol {   
+            background-color: var(--calitera-grey-light);
+            width: 50px;
+            height: 50px;
+            .svg-icon {
+                padding: 11px;
+            }
+        }
+        .badge-light-success {
+            margin-left: 0!important;
+        }
+        .menu-item .menu-content{ 
+            padding-top: 0;    
+        }
+        .menu-link {
+            .svg-icon {
+                padding: 0 7px 0 0;
+            }
+            &:hover {
+                .svg-icon {
+                    color: var(--calitera-blue-light);
+                }
+            }
+        }
+    }
+    
+}
+
+.badge-light-success {
+    color: var(--calitera-success);
+    background-color: var(--calitera-success-light);
+}
+
+.menu-sub {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+}
+
+.menu-sub-dropdown {
+    display: none;
+    border-radius: 0.475rem;
+    background-color: var(--calitera-white);
+    box-shadow: var(--calitera-menu-dropdown-box-shadow);
+    z-index: 107;
+}

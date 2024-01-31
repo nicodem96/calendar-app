@@ -1,0 +1,91 @@
+.btn {
+    outline: 0!important;
+}
+
+.btn.btn-flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn.btn-primary {
+    color: var(--calitera-white);
+    border-color: var(--calitera-blue-light);
+    background-color: var(--calitera-blue-light);
+    &.btn-big {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px!important;
+        padding-bottom: 20px!important;
+        box-shadow: var(--calitera-card-box-shadow);
+    }
+    &.negative {
+        border-color: var(--calitera-white);
+        background-color: var(--calitera-white);
+        color: var(--calitera-blue-darkest);
+        i, .svg-icon {
+            color: var(--calitera-blue-darkest);
+        }
+        &:hover {
+            color: var(--calitera-white);
+            border-color: var(--calitera-blue-light);
+            background-color: var(--calitera-blue-light)!important;
+            i, .svg-icon {
+                color: var(--calitera-white);
+            }
+        }
+    }
+}
+
+.btn.btn-primary i, .btn.btn-primary .svg-icon {
+    color: var(--calitera-white);
+}
+
+.btn.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: calc(1.5em + 1.55rem + 2px);
+    width: calc(1.5em + 1.55rem + 2px);
+}
+
+.btn.btn-color-muted {
+    color: var(--calitera-text-muted);
+}
+
+.btn.btn-icon:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(.border-active):not(.btn-flush) {
+    border: 0;
+}
+
+.btn-group-sm>.btn.btn-icon, .btn.btn-icon.btn-sm {
+    height: calc(1.5em + 1.1rem + 2px);
+    width: calc(1.5em + 1.1rem + 2px);
+}
+
+.btn .svg-icon {
+    flex-shrink: 0;
+    line-height: 0;
+    margin-right: 0.5rem;
+}
+
+.active>.rotate-180, .collapsible:not(.collapsed)>.rotate-180, .show>.rotate-180 {
+    transform: rotateZ(180deg);
+    transition: transform .3s ease;
+}
+
+.btn.btn-icon .svg-icon, .btn.btn-icon i {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.btn.btn-color-muted .svg-icon, .btn.btn-color-muted i {
+    color: var(--calitera-text-muted);
+}
+
+.calitera-filters-button {
+    height: 45.88px;
+    width: 170px;
+}
